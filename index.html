@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="18D Cinema - Premium cinematic experience with cutting-edge technology and immersive entertainment.">
+    <title>18D Cinema | Premium Cinematic Experience</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">
+                <span>18D Cinema</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#themes">Themes</a></li>
+                <li><a href="#office">Office</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero / QR Landing Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge">Welcome to 18D Cinema</div>
+            <h1>Experience Cinema<br><span class="gradient-text">Like Never Before</span></h1>
+            <p class="hero-subtitle">Step into the future of entertainment with our cutting-edge 18-dimensional
+                cinematic technology. Feel every scene, live every moment.</p>
+            <div class="hero-actions">
+                <a href="#themes" class="btn btn-primary"><i class="fas fa-play-circle"></i> Explore Themes</a>
+                <button class="btn btn-book" id="openBookingBtn"><i class="fas fa-ticket-alt"></i> Book Now</button>
+                <a href="#contact" class="btn btn-outline"><i class="fas fa-phone"></i> Get in Touch</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number" data-target="18" data-no-animate="true">18</span><span class="stat-suffix">D</span>
+                    <span class="stat-label">Dimensions</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="5000">0</span><span class="stat-suffix">+</span>
+                    <span class="stat-label">Happy Visitors</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="50">0</span><span class="stat-suffix">+</span>
+                    <span class="stat-label">Shows Daily</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Movie Themes Section -->
+    <section class="themes" id="themes">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Our Movies</span>
+                <h2>Movie Themes</h2>
+                <p>Enjoy a thrilling 8&ndash;10 minute immersive ride &mdash; pick your world and feel every scene come
+                    alive!</p>
+            </div>
+            <div class="themes-grid">
+                <!-- Ocean & Sea Adventures -->
+                <div class="theme-card">
+                    <div class="theme-card-image">
+                        <img src="images/ocean-sea.png" alt="Ocean &amp; Sea Adventures">
+                    </div>
+                    <div class="theme-card-overlay">
+                        <h3>🌊 Ocean &amp; Sea</h3>
+                    </div>
+                    <div class="theme-card-hover">
+                        <h3>🌊 Ocean &amp; Sea Adventures</h3>
+                        <ul class="theme-list">
+                            <li><span class="theme-emoji">🌊</span> Ocean Exploration</li>
+                            <li><span class="theme-emoji">🐋</span> Deep Sea</li>
+                            <li><span class="theme-emoji">🐢</span> Turtle Tour</li>
+                            <li><span class="theme-emoji">🌊</span> Sea God</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Action & Thrill -->
+                <div class="theme-card">
+                    <div class="theme-card-image">
+                        <img src="images/action-thrill.png" alt="Action &amp; Thrill">
+                    </div>
+                    <div class="theme-card-overlay">
+                        <h3>⚡ Action &amp; Thrill</h3>
+                    </div>
+                    <div class="theme-card-hover">
+                        <h3>⚡ Action &amp; Thrill</h3>
+                        <ul class="theme-list">
+                            <li><span class="theme-emoji">🎢</span> Canyon Roller Coaster</li>
+                            <li><span class="theme-emoji">😈</span> Evil Soul</li>
+                            <li><span class="theme-emoji">👻</span> Ghost Doll</li>
+                            <li><span class="theme-emoji">⚡</span> Spark Plan</li>
+                            <li><span class="theme-emoji">✈️</span> Flight Orbital Cinema</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Fantasy & Magic -->
+                <div class="theme-card">
+                    <div class="theme-card-image">
+                        <img src="images/fantasy-magic.png" alt="Fantasy &amp; Magic">
+                    </div>
+                    <div class="theme-card-overlay">
+                        <h3>✨ Fantasy &amp; Magic</h3>
+                    </div>
+                    <div class="theme-card-hover">
+                        <h3>✨ Fantasy &amp; Magic</h3>
+                        <ul class="theme-list">
+                            <li><span class="theme-emoji">✨</span> Fantastic Journey</li>
+                            <li><span class="theme-emoji">🧞‍♂️</span> Aladdin</li>
+                            <li><span class="theme-emoji">🌸</span> Flowers Hope Valley</li>
+                            <li><span class="theme-emoji">🤖</span> Doll Robot</li>
+                            <li><span class="theme-emoji">🌍</span> Meet The World</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Nature & Space -->
+                <div class="theme-card">
+                    <div class="theme-card-image">
+                        <img src="images/nature-space.png" alt="Nature &amp; Space">
+                    </div>
+                    <div class="theme-card-overlay">
+                        <h3>🌍 Nature &amp; Space</h3>
+                    </div>
+                    <div class="theme-card-hover">
+                        <h3>🌍 Nature &amp; Space</h3>
+                        <ul class="theme-list">
+                            <li><span class="theme-emoji">🦖</span> Dinosaur Adventure</li>
+                            <li><span class="theme-emoji">🚀</span> Interstellar Adventure</li>
+                            <li><span class="theme-emoji">🌳</span> Forest Adventure</li>
+                            <li><span class="theme-emoji">🏝️</span> Adventure Island</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <p class="themes-hint"><i class="fas fa-hand-pointer"></i> Hover or tap a card to see what’s inside</p>
+        </div>
+    </section>
+
+    <!-- Office Information Section -->
+    <section class="office" id="office">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Visit Us</span>
+                <h2>Office Information</h2>
+                <p>Find us at our convenient location and experience the magic in person.</p>
+            </div>
+            <div class="office-grid office-grid-3">
+                <div class="office-card">
+                    <div class="office-card-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <h3>Kathmandu</h3>
+                    <p>City Centre<br>Kathmandu, Nepal</p>
+                </div>
+                <div class="office-card">
+                    <div class="office-card-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <h3>Pokhara</h3>
+                    <p>DisneyLand<br>Kaski, Nepal</p>
+                </div>
+                <div class="office-card">
+                    <div class="office-card-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <h3>Chitwan</h3>
+                    <p>CG Mall<br>Chitwan, Nepal</p>
+                </div>
+            </div>
+            <div class="office-hours-card">
+                <div class="office-card-icon"><i class="fas fa-clock"></i></div>
+                <h3>Operating Hours</h3>
+                <p>Daily: 10:00 AM – 7:00 PM</p>
+            </div>
+            <!-- Google Map -->
+            <div class="map-container">
+                <iframe
+                    src="https://www.google.com/maps?q=City+Centre+Putalisadak+Kathmandu+Nepal&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                    width="100%" height="350" style="border:0;border-radius:16px;display:block;" allowfullscreen=""
+                    loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Reach Out</span>
+                <h2>Contact Us</h2>
+                <p>Have questions or want to book a session? We'd love to hear from you.</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info-panel">
+                    <h3>Get In Touch</h3>
+                    <p>Reach out through any of the channels below or fill out the form and we'll get back to you
+                        shortly.</p>
+                    <div class="contact-detail">
+                        <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+                        <div>
+                            <span class="contact-label">Phone</span>
+                            <a href="tel:+9779705153227">+977 9705153227</a>
+                        </div>
+                    </div>
+                    <div class="contact-detail">
+                        <div class="contact-icon"><i class="fab fa-facebook"></i></div>
+                        <div>
+                            <span class="contact-label">Facebook</span>
+                            <a href="https://www.facebook.com/chobhargorge/" target="_blank"
+                                rel="noopener noreferrer">FlyOver Entertainment</a>
+                        </div>
+                    </div>
+                    <div class="contact-detail">
+                        <div class="contact-icon"><i class="fab fa-tiktok"></i></div>
+                        <div>
+                            <span class="contact-label">TikTok</span>
+                            <a href="https://www.tiktok.com/@flyover18dcinema" target="_blank"
+                                rel="noopener noreferrer">@flyover18dcinema</a>
+                        </div>
+                    </div>
+                    <div class="contact-detail">
+                        <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
+                        <div>
+                            <span class="contact-label">WhatsApp</span>
+                            <a href="https://wa.me/9779705153227" target="_blank" rel="noopener noreferrer">+977
+                                9705153227</a>
+                        </div>
+                    </div>
+                    <div class="contact-detail">
+                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                        <div>
+                            <span class="contact-label">Gmail</span>
+                            <a href="mailto:flyoverentertainment2@gmail.com">flyoverentertainment2@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/chobhargorge/" target="_blank" rel="noopener noreferrer"
+                            class="social-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.tiktok.com/@flyover18dcinema" target="_blank" rel="noopener noreferrer"
+                            class="social-btn" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://wa.me/9779705153227" target="_blank" rel="noopener noreferrer"
+                            class="social-btn" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="mailto:flyoverentertainment2@gmail.com" class="social-btn" aria-label="Gmail"><i
+                                class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#home" class="nav-logo"><span>18D Cinema</span></a>
+                    <p>Your gateway to the most immersive cinematic experience in Nepal. Feel every scene, live every
+                        moment.</p>
+                </div>
+                <div class="footer-links-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#themes">Themes</a></li>
+                        <li><a href="#office">Office Info</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links-col">
+                    <h4>Follow Us</h4>
+                    <ul>
+                        <li><a href="https://www.facebook.com/chobhargorge/" target="_blank"
+                                rel="noopener noreferrer"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+                        <li><a href="https://www.tiktok.com/@flyover18dcinema" target="_blank"
+                                rel="noopener noreferrer"><i class="fab fa-tiktok"></i> TikTok</a></li>
+                        <li><a href="https://wa.me/9779705153227" target="_blank" rel="noopener noreferrer"><i
+                                    class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                        <li><a href="mailto:flyoverentertainment2@gmail.com"><i class="fas fa-envelope"></i> Gmail</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-presented">
+                <p>Presented by <span class="presented-brand">FlyOver Entertainment</span></p>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 FlyOver Entertainment Pvt. Ltd. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== Book Now Modal ===== -->
+    <div class="modal-backdrop" id="bookingModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <div class="modal-box">
+            <button class="modal-close" id="closeModalBtn" aria-label="Close modal"><i
+                    class="fas fa-times"></i></button>
+
+            <!-- Step 0: Location Selection -->
+            <div id="stepLocation">
+                <div class="modal-header">
+                    <div class="modal-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <h2>Select Your Location</h2>
+                    <p>Choose a location to continue your booking.</p>
+                </div>
+                <div class="modal-body">
+                    <div class="location-grid">
+                        <button class="location-option" type="button" data-location="kathmandu">
+                            <span class="location-title">City Centre</span>
+                            <span class="location-subtitle">Kathmandu</span>
+                        </button>
+                        <button class="location-option" type="button" data-location="pokhara">
+                            <span class="location-title">DisneyLand</span>
+                            <span class="location-subtitle">Pokhara</span>
+                        </button>
+                        <button class="location-option" type="button" data-location="chitwan">
+                            <span class="location-title">CG Mall</span>
+                            <span class="location-subtitle">Chitwan</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 1: Booking Form -->
+            <div id="stepForm" style="display:none;">
+                <div class="modal-header">
+                    <div class="modal-icon"><i class="fas fa-ticket-alt"></i></div>
+                    <h2 id="modalTitle">Book Your Tickets</h2>
+                    <p>Fill in your details to reserve your 18D Cinema experience.</p>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="bkName">Full Name</label>
+                        <input type="text" id="bkName" placeholder="Your full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="bkPhone">Phone Number</label>
+                        <input type="tel" id="bkPhone" placeholder="+977 98XXXXXXXX" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="bkDate">Date of Visit</label>
+                        <input type="date" id="bkDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="bkTickets">Number of Tickets</label>
+                        <div class="ticket-counter">
+                            <button type="button" class="ticket-btn" id="ticketMinus"><i
+                                    class="fas fa-minus"></i></button>
+                            <input type="number" id="bkTickets" value="1" min="1" max="20">
+                            <button type="button" class="ticket-btn" id="ticketPlus"><i
+                                    class="fas fa-plus"></i></button>
+                        </div>
+                    </div>
+                    <div class="price-summary">
+                        <span>Rs. 300 &times; <span id="ticketCount">1</span> ticket(s)</span>
+                        <span class="total-price">Total: <strong id="totalAmount">Rs. 300</strong></span>
+                    </div>
+                    <button class="btn btn-primary btn-full" id="proceedBtn"><i class="fas fa-arrow-right"></i> Proceed
+                        to Payment</button>
+                </div>
+            </div>
+
+            <!-- Step 2: Payment QR -->
+            <div id="stepPayment" style="display:none;">
+                <div class="modal-header">
+                    <div class="modal-icon"><i class="fas fa-qrcode"></i></div>
+                    <h2>Scan &amp; Pay</h2>
+                    <p id="payInstructions">Scan to pay via your mobile banking app.</p>
+                </div>
+                <div class="modal-body">
+                    <div class="qr-container" id="qrContainer">
+                        <img src="18d.jpg" alt="Payment QR Code" class="qr-image" id="qrImage">
+                    </div>
+                    <p class="payment-notice" id="paymentNotice" style="display:none;"></p>
+                    <div class="booking-summary" id="bookingSummary"></div>
+                    <a id="whatsappBtn" href="#" target="_blank" rel="noopener noreferrer"
+                        class="btn btn-whatsapp btn-full">
+                        <i class="fab fa-whatsapp"></i> Send Confirmation via WhatsApp
+                    </a>
+                    <button class="btn btn-outline btn-full" id="backBtn" style="margin-top:10px;">
+                        <i class="fas fa-arrow-left"></i> Back
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
