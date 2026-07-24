@@ -29,11 +29,19 @@
                 <li><a href="#office">Office</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+            <!-- Instagram Offers Button -->
+            <a href="https://www.instagram.com/flyoverentertainment/" target="_blank" rel="noopener noreferrer"
+                class="insta-offers-btn" aria-label="Check latest offers on Instagram">
+                <i class="fab fa-instagram"></i>
+                <span>Check Offers</span>
+            </a>
             <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
                 <span></span><span></span><span></span>
             </button>
         </div>
     </nav>
+    <!-- Mobile Nav Overlay -->
+    <div class="nav-overlay" id="navOverlay"></div>
 
     <!-- Hero / QR Landing Section -->
     <section class="hero" id="home">
@@ -54,7 +62,8 @@
             </div>
             <div class="hero-stats">
                 <div class="stat-item">
-                    <span class="stat-number" data-target="18" data-no-animate="true">18</span><span class="stat-suffix">D</span>
+                    <span class="stat-number" data-target="18" data-no-animate="true">18</span><span
+                        class="stat-suffix">D</span>
                     <span class="stat-label">Dimensions</span>
                 </div>
                 <div class="stat-item">
@@ -170,7 +179,7 @@
                 <div class="office-card">
                     <div class="office-card-icon"><i class="fas fa-map-marker-alt"></i></div>
                     <h3>Kathmandu</h3>
-                    <p>City Centre<br>Kathmandu, Nepal</p>
+                    <p>City Centre 3rd Floor<br>Kathmandu, Nepal</p>
                 </div>
                 <div class="office-card">
                     <div class="office-card-icon"><i class="fas fa-map-marker-alt"></i></div>
@@ -210,8 +219,8 @@
             <div class="contact-grid">
                 <div class="contact-info-panel">
                     <h3>Get In Touch</h3>
-                    <p>Reach out through any of the channels below or fill out the form and we'll get back to you
-                        shortly.</p>
+                    <p>Reach out through any of the channels below and we'll get back to you
+                        .</p>
                     <div class="contact-detail">
                         <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
                         <div>
@@ -236,6 +245,14 @@
                         </div>
                     </div>
                     <div class="contact-detail">
+                        <div class="contact-icon"><i class="fab fa-instagram"></i></div>
+                        <div>
+                            <span class="contact-label">Instagram</span>
+                            <a href="https://www.instagram.com/flyoverentertainment/" target="_blank"
+                                rel="noopener noreferrer">@flyoverentertainment</a>
+                        </div>
+                    </div>
+                    <div class="contact-detail">
                         <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
                         <div>
                             <span class="contact-label">WhatsApp</span>
@@ -253,6 +270,9 @@
                     <div class="social-links">
                         <a href="https://www.facebook.com/chobhargorge/" target="_blank" rel="noopener noreferrer"
                             class="social-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/flyoverentertainment/" target="_blank"
+                            rel="noopener noreferrer" class="social-btn instagram" aria-label="Instagram"><i
+                                class="fab fa-instagram"></i></a>
                         <a href="https://www.tiktok.com/@flyover18dcinema" target="_blank" rel="noopener noreferrer"
                             class="social-btn" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
                         <a href="https://wa.me/9779705153227" target="_blank" rel="noopener noreferrer"
@@ -261,7 +281,7 @@
                                 class="fas fa-envelope"></i></a>
                     </div>
                 </div>
-                
+
             </div>
         </div>
     </section>
@@ -289,6 +309,8 @@
                     <ul>
                         <li><a href="https://www.facebook.com/chobhargorge/" target="_blank"
                                 rel="noopener noreferrer"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+                        <li><a href="https://www.instagram.com/flyoverentertainment/" target="_blank"
+                                rel="noopener noreferrer"><i class="fab fa-instagram"></i> Instagram</a></li>
                         <li><a href="https://www.tiktok.com/@flyover18dcinema" target="_blank"
                                 rel="noopener noreferrer"><i class="fab fa-tiktok"></i> TikTok</a></li>
                         <li><a href="https://wa.me/9779705153227" target="_blank" rel="noopener noreferrer"><i
@@ -392,7 +414,7 @@
                     <div class="booking-summary" id="bookingSummary"></div>
                     <a id="whatsappBtn" href="#" target="_blank" rel="noopener noreferrer"
                         class="btn btn-whatsapp btn-full">
-                        <i class="fab fa-whatsapp"></i> Send Confirmation via WhatsApp
+                        <i class="fab fa-whatsapp"></i> Send Screenshot via WhatsApp
                     </a>
                     <button class="btn btn-outline btn-full" id="backBtn" style="margin-top:10px;">
                         <i class="fas fa-arrow-left"></i> Back
@@ -404,6 +426,17 @@
 
     <!-- Back to Top -->
     <button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+
+    <!-- ===== Custom Alert Modal ===== -->
+    <div class="custom-alert-backdrop" id="customAlertBackdrop" role="alertdialog" aria-modal="true"
+        aria-labelledby="customAlertTitle">
+        <div class="custom-alert-box" id="customAlertBox">
+            <div class="custom-alert-icon" id="customAlertIcon"><i class="fas fa-exclamation-triangle"></i></div>
+            <h3 class="custom-alert-title" id="customAlertTitle">Heads up!</h3>
+            <p class="custom-alert-message" id="customAlertMessage"></p>
+            <button class="btn btn-primary custom-alert-ok" id="customAlertOk">Got it</button>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>

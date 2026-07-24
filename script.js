@@ -2,8 +2,44 @@
 const navbar = document.getElementById('navbar');
 const navToggle = document.getElementById('navToggle');
 const navLinks = document.getElementById('navLinks');
+const navOverlay = document.getElementById('navOverlay');
 const backToTop = document.getElementById('backToTop');
 const contactForm = document.getElementById('contactForm');
+
+// ===== Custom Alert (replaces browser alert()) =====
+const customAlertBackdrop = document.getElementById('customAlertBackdrop');
+const customAlertTitle = document.getElementById('customAlertTitle');
+const customAlertMessage = document.getElementById('customAlertMessage');
+const customAlertIcon = document.getElementById('customAlertIcon');
+const customAlertOk = document.getElementById('customAlertOk');
+
+function showAlert(message, { title = 'Heads up!', type = 'warn' } = {}) {
+    customAlertTitle.textContent = title;
+    customAlertMessage.textContent = message;
+    // Choose icon
+    const iconEl = customAlertIcon.querySelector('i');
+    if (type === 'error') {
+        iconEl.className = 'fas fa-times-circle';
+        customAlertIcon.classList.add('error');
+    } else {
+        iconEl.className = 'fas fa-exclamation-triangle';
+        customAlertIcon.classList.remove('error');
+    }
+    customAlertBackdrop.classList.add('active');
+    customAlertOk.focus();
+}
+
+customAlertOk.addEventListener('click', () => {
+    customAlertBackdrop.classList.remove('active');
+});
+customAlertBackdrop.addEventListener('click', (e) => {
+    if (e.target === customAlertBackdrop) customAlertBackdrop.classList.remove('active');
+});
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && customAlertBackdrop.classList.contains('active')) {
+        customAlertBackdrop.classList.remove('active');
+    }
+});
 
 // ===== Navbar Scroll Effect =====
 let lastScroll = 0;
@@ -20,16 +56,35 @@ window.addEventListener('scroll', () => {
 });
 
 // ===== Mobile Nav Toggle =====
+function openMobileNav() {
+    navToggle.classList.add('active');
+    navLinks.classList.add('active');
+    navOverlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeMobileNav() {
+    navToggle.classList.remove('active');
+    navLinks.classList.remove('active');
+    navOverlay.classList.remove('active');
+    document.body.style.overflow = '';
+}
+
 navToggle.addEventListener('click', () => {
-    navToggle.classList.toggle('active');
-    navLinks.classList.toggle('active');
+    if (navLinks.classList.contains('active')) {
+        closeMobileNav();
+    } else {
+        openMobileNav();
+    }
 });
+
+// Close via overlay click
+navOverlay.addEventListener('click', closeMobileNav);
 
 // Close mobile nav on link click
 navLinks.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
-        navToggle.classList.remove('active');
-        navLinks.classList.remove('active');
+        closeMobileNav();
     });
 });
 
@@ -210,14 +265,14 @@ const locationConfig = {
     },
     pokhara: {
         label: 'DisneyLand, Pokhara',
-        whatsapp: '9779712053228',
+        whatsapp: '9779712053227',
         qrSrc: '18D_Pokhara.jpeg',
         qrAlt: 'Pokhara Payment QR Code'
     },
     chitwan: {
         label: 'CG Mall, Chitwan',
-        whatsapp: '9779712053227',
-        qrSrc: null,
+        whatsapp: '9779712053228',
+        qrSrc: '18D_Chitwan.jpeg',
         qrAlt: 'Chitwan Payment QR Code'
     }
 };
@@ -259,7 +314,7 @@ whatsappBtn.addEventListener('click', (e) => {
     const link = whatsappBtn.getAttribute('href');
     if (!link || link === '#') {
         e.preventDefault();
-        alert('Please complete the booking form first.');
+        showAlert('Please complete the booking form first.', { title: 'Not so fast!' });
     }
 });
 
@@ -325,9 +380,9 @@ proceedBtn.addEventListener('click', () => {
     const total = tickets * TICKET_PRICE;
 
     // Simple validation
-    if (!name) { alert('Please enter your full name.'); return; }
-    if (!phone) { alert('Please enter your phone number.'); return; }
-    if (!date) { alert('Please select a date of visit.'); return; }
+    if (!name) { showAlert('Please enter your full name.', { title: 'Missing Info', type: 'error' }); return; }
+    if (!phone) { showAlert('Please enter your phone number.', { title: 'Missing Info', type: 'error' }); return; }
+    if (!date) { showAlert('Please select a date of visit.', { title: 'Missing Info', type: 'error' }); return; }
 
     // Format date nicely
     const dateObj = new Date(date);
