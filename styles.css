@@ -722,6 +722,13 @@ img {
     font-size: 0.9rem;
 }
 
+.office-card-hours {
+    margin-top: 12px;
+    color: var(--primary-light);
+    font-size: 0.86rem;
+    font-weight: 600;
+}
+
 .map-container {
     border-radius: var(--radius-lg);
     overflow: hidden;
@@ -994,16 +1001,16 @@ img {
 
 /* ===== Book Now Button ===== */
 .btn-book {
-    background: linear-gradient(135deg, #f9c74f, #f3a000);
+    background: #ffffff;
     color: #0A1628;
     font-weight: 700;
     letter-spacing: 0.3px;
-    box-shadow: 0 2px 14px rgba(243, 160, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+    box-shadow: 0 2px 14px rgba(255, 255, 255, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.7);
 }
 
 .btn-book:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 24px rgba(243, 160, 0, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+    box-shadow: 0 6px 24px rgba(255, 255, 255, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.7);
     color: #0A1628;
 }
 

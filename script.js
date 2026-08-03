@@ -115,10 +115,6 @@ function animateCounters() {
     const counters = document.querySelectorAll('.stat-number');
     counters.forEach(counter => {
         if (counter.getAttribute('data-no-animate') === 'true') {
-            const targetValue = parseInt(counter.getAttribute('data-target'));
-            if (!Number.isNaN(targetValue)) {
-                counter.textContent = targetValue;
-            }
             return;
         }
 
